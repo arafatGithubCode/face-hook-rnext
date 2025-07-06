@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "31347972-7c418e90-0f78-4a98-ba8e-6e67a22bcd8a",
+		"name": "face-hook-m5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"id": "31347972-5929f635-376a-4717-8e0c-a9ccde69d6a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"id": "31347972-62391ec4-6137-483b-9eaa-0d0688eb327a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "31347972-2ccca0cf-9ba4-444f-a09a-197c8f28f70d"
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create a post",
+					"id": "31347972-5ac11417-4fb3-4182-bb64-7d4f40ab767f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"postType\": \"text\",\r\n  \"body\": \"Grateful for the incredible experience...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/posts",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment",
+					"id": "31347972-24409df3-bb37-4277-9a1f-715c84d6598c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "31347972-66ca8eb4-381e-4ead-beb5-80a78fba7a9f"
+		},
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "health",
+					"id": "31347972-de7c4e53-8632-42b2-a1c0-6469da66d0b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "err test",
+					"id": "31347972-c150c512-2bf2-472c-99f7-1febdc3e3aa3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/test-err",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"test-err"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "31347972-b26f250a-e29d-4da8-8a31-e98b420251d4"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d6c45322-247e-43e8-8855-058335fc6898",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2a04ebc2-aa48-4f2a-a01a-f2e76d67207a",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMyMmIyZDgzLWUxOTUtNGNkMC05NmE3LWJhNmIxMDA5ZDExYiIsImVtYWlsIjoiYXJhZmF0LmRldkBnbWFpbC5jb20iLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNzE1NjkxLCJleHAiOjE3NTE3MTkyOTF9.hTfv1boevSItd5ExMdU6ZWkr5gyoakQ6h2VG9xubLIg",
+			"type": "string"
+		}
+	]
+}
