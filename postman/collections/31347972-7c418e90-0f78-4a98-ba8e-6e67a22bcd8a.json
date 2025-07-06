@@ -152,8 +152,21 @@
 			"id": "31347972-b26f250a-e29d-4da8-8a31-e98b420251d4"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "dash-board",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "31347972-c0afdd15-c979-4a7c-92f0-248ead36ddc4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "31347972-ae0672c7-38a9-42f5-ad9f-ee33b2178597"
 		}
 	],
